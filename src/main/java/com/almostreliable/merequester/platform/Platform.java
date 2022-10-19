@@ -85,4 +85,8 @@ public final class Platform {
     public static List<Widget> getRenderables(Screen screen) {
         return screen.renderables;
     }
+
+    public static boolean isModLoaded(String mod) {
+        return FabricLoader.getInstance().isModLoaded(mod);
+    }
 }

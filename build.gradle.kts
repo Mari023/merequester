@@ -15,6 +15,7 @@ val parchmentVersion: String by project
 val forgeVersion: String by project
 val forgeRecipeViewer: String by project
 val aeVersion: String by project
+val ae2wtlibVersion: String by project
 val jeiVersion: String by project
 val reiVersion: String by project
 val githubUser: String by project
@@ -72,6 +73,7 @@ dependencies {
     // Compile
     modCompileOnly("appeng:appliedenergistics2-forge:$aeVersion")
     modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-forge:$reiVersion")
+    modCompileOnly("maven.modrinth:applied-energistics-2-wireless-terminals:12.8.5-fabric")
 
     // Runtime
     modLocalRuntime("appeng:appliedenergistics2-forge:$aeVersion")
