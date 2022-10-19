@@ -18,6 +18,7 @@ val fabricLoaderVersion: String by project
 val fabricApiVersion: String by project
 val fabricRecipeViewer: String by project
 val aeVersion: String by project
+val ae2wtlibVersion: String by project
 val reiVersion: String by project
 val jeiVersion: String by project
 val githubUser: String by project
@@ -75,9 +76,12 @@ dependencies {
     // Compile
     modCompileOnly("appeng:appliedenergistics2-fabric:$aeVersion")
     modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-fabric:$reiVersion")
+    modCompileOnly("maven.modrinth:applied-energistics-2-wireless-terminals:$ae2wtlibVersion-fabric")
 
     // Runtime
     modLocalRuntime("appeng:appliedenergistics2-fabric:$aeVersion")
+    modLocalRuntime("me.shedaniel.cloth:cloth-config-fabric:11.1.106")
+    modLocalRuntime("maven.modrinth:applied-energistics-2-wireless-terminals:$ae2wtlibVersion-fabric")
     when (fabricRecipeViewer) {
         "rei" -> modLocalRuntime("me.shedaniel:RoughlyEnoughItems-fabric:$reiVersion")
         "jei" -> modLocalRuntime("mezz.jei:jei-$minecraftVersion-fabric:$jeiVersion") { isTransitive = false }
