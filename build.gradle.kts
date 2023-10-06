@@ -56,6 +56,8 @@ repositories {
     maven("https://modmaven.dev/") // Applied Energistics 2
     maven("https://maven.blamejared.com") // JEI
     maven("https://maven.shedaniel.me") // REI
+    maven("https://api.modrinth.com/maven")
+    maven("https://maven.theillusivec4.top/")
     mavenLocal()
 }
 
@@ -73,10 +75,14 @@ dependencies {
     // Compile
     modCompileOnly("appeng:appliedenergistics2-forge:$aeVersion")
     modCompileOnly("me.shedaniel:RoughlyEnoughItems-api-forge:$reiVersion")
-    modCompileOnly("maven.modrinth:applied-energistics-2-wireless-terminals:12.8.5-fabric")
+    modCompileOnly("maven.modrinth:applied-energistics-2-wireless-terminals:12.8.5-forge")
 
     // Runtime
     modLocalRuntime("appeng:appliedenergistics2-forge:$aeVersion")
+    modLocalRuntime("maven.modrinth:applied-energistics-2-wireless-terminals:12.8.5-forge")
+    modLocalRuntime("dev.architectury:architectury-forge:6.5.82")
+    modLocalRuntime("me.shedaniel.cloth:cloth-config-forge:8.3.103")
+    modLocalRuntime("top.theillusivec4.curios:curios-forge:1.19-5.1.0.4")
     when (forgeRecipeViewer) {
         "rei" -> modLocalRuntime("me.shedaniel:RoughlyEnoughItems-forge:$reiVersion")
         "jei" -> modLocalRuntime("mezz.jei:jei-$minecraftVersion-forge:$jeiVersion") { isTransitive = false }

@@ -17,6 +17,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.loading.FMLLoader;
 import net.minecraftforge.network.PacketDistributor;
 
 import java.util.List;
@@ -87,6 +88,6 @@ public final class Platform {
     }
 
     public static boolean isModLoaded(String mod) {
-        return FabricLoader.getInstance().isModLoaded(mod);
+        return FMLLoader.getLoadingModList().getModFileById(mod) != null;
     }
 }

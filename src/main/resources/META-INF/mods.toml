@@ -31,3 +31,10 @@ mandatory = true
 versionRange = "[${aeVersion},)"
 ordering = "AFTER"
 side = "BOTH"
+
+[[dependencies.${modId}]]
+modId = "ae2wtlib"
+mandatory = false
+versionRange = "*"
+ordering = "BEFORE"
+side = "BOTH"
