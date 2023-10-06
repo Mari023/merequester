@@ -18,6 +18,8 @@ public class WirelessRequesterTerminalRegistration {
         ForgeRegistries.ITEMS.register("wireless_requester_terminal", WIRELESS_REQUESTER_TERMINAL);
         GridLinkables.register(WIRELESS_REQUESTER_TERMINAL, WirelessTerminalItem.LINKABLE_HANDLER);
         Upgrades.add(AEItems.ENERGY_CARD, WIRELESS_REQUESTER_TERMINAL, 2, GuiText.WirelessTerminals.getTranslationKey());
+        HotkeyActions.register(new InventoryHotkeyAction(WIRELESS_REQUESTER_TERMINAL,
+            (player, i) -> WIRELESS_REQUESTER_TERMINAL.openFromInventory(player, i)), "wireless_requester_terminal");
     }
 
     public static void initMenus() {
